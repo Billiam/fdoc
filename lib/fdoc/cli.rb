@@ -46,6 +46,7 @@ module Fdoc
       def convert_to_html
         in_root do
           copy_file("styles.css")
+          copy_file("theme/github.css", "github.css")
           create_file("index.html", meta_presenter.to_html) if has_meta_service?
         end
 

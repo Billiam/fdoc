@@ -3,6 +3,7 @@ body {
   font: 11pt/14pt "Helvetica Neue", Helvetica, sans-serif;
   margin: 0;
   padding: 0;
+  color: #333;
 }
 
 #page {
@@ -52,16 +53,6 @@ ul, ol, dl {
 p {
   margin: .5em 0 .5em 0;
   padding: 0;
-}
-
-pre code { display: block; }
-tt, kbd, code {
-  font-family: Monaco, monospace;
-  font-size: 80%;
-  background: #eee;
-  padding: .1em;
-  border: 1pt solid #ddd;
-  white-space: pre-wrap;
 }
 
 .endpoint-name {}

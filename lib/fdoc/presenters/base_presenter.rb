@@ -40,6 +40,10 @@ class Fdoc::BasePresenter
     File.join(html_directory, "styles.css")
   end
 
+  def theme_css_path
+    File.join(html_directory, "github.css")
+  end
+
   def index_path(subdirectory = "")
     html_path = File.join(html_directory, subdirectory)
     if options[:static_html]
