@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      PUT add - Members API
+    </title>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="/styles.css" />
+    <link rel="stylesheet" type="text/css" href="/github.css" />
+  </head>
+  <body>
+    <div id="page">
+      <div id="content">
+        <h1>
+          <span class="endpoint-name ">
+  <span class="verb">PUT</span>
+  <span class="root">https:&#8203;/&#8203;/api.sample.com&#8203;/members&#8203;/</span>
+  <span class="path">add</span>
+  
+</span>
+
+        </h1>
+
+        <div id="nav">
+          
+            <a href="/index.html">
+              &#187; fdoc Sample API
+            </a>
+          
+          
+            <a href="/members_api/index.html">&#187; Members API</a>
+          
+        </div>
+
+        <p>Add a new member</p>
+
+
+        
+              <h2 id="request">
+      <a href="#request" class="anchor">
+        Request
+      </a>
+    </h2>
+
+
+              <h3 id="example_request">
+      <a href="#example_request" class="anchor">
+        Example Request
+      </a>
+    </h3>
+
+          <div class="CodeRay"><pre>{
+  <span class="key"><span class="delimiter">&quot;</span><span class="content">name</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">Max Power</span><span class="delimiter">&quot;</span></span>,
+  <span class="key"><span class="delimiter">&quot;</span><span class="content">email</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">mpower@example.com</span><span class="delimiter">&quot;</span></span>
+}</pre></div>
+
+              <h3 id="request_parameters">
+      <a href="#request_parameters" class="anchor">
+        Request Parameters
+      </a>
+    </h3>
+
+          <div class="schema"><ul><li>    <span id="name-179298556">
+      <a href="#name-179298556" class="anchor">
+        <tt>name</tt>
+      </a>
+    </span>
+<div class="schema"><p>The name of the member to add, must be unique.</p>
+<ul><li>Required: yes</li><li>Type: string</li><li>Example: <tt>&quot;Max Power&quot;</tt></li></ul></div></li><li>    <span id="email--935994922">
+      <a href="#email--935994922" class="anchor">
+        <tt>email</tt>
+      </a>
+    </span>
+<div class="schema"><p>The email of the member to add</p>
+<ul><li>Required: no</li><li>Type: string</li><li>Example: <tt>&quot;mpower@example.com&quot;</tt></li></ul></div></li></ul></div>
+        
+
+            <h2 id="response">
+      <a href="#response" class="anchor">
+        Response
+      </a>
+    </h2>
+
+        
+
+            <h3 id="response_codes">
+      <a href="#response_codes" class="anchor">
+        Response Codes
+      </a>
+    </h3>
+
+        
+              <h4 id="successful_response_codes">
+      <a href="#successful_response_codes" class="anchor">
+        Successful Response Codes
+      </a>
+    </h4>
+
+          <ul>
+            
+            <li>
+                    <div class="response-code">
+        <span class="status">
+          200 OK
+        </span>
+        <p>Returns the member just added</p>
+
+      </div>
+
+            </li>
+            
+          </ul>
+        
+
+        
+              <h4 id="failure_response_codes">
+      <a href="#failure_response_codes" class="anchor">
+        Failure Response Codes
+      </a>
+    </h4>
+
+          <ul>
+            
+            <li>
+                    <div class="response-code">
+        <span class="status">
+          400 Bad Request
+        </span>
+        <p>Member already exists</p>
+
+      </div>
+
+            </li>
+            
+          </ul>
+        
+      </div>
+    </div>
+  </body>
+</html>
+

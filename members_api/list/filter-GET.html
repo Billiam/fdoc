@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      GET list/filter - Members API
+    </title>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="/styles.css" />
+    <link rel="stylesheet" type="text/css" href="/github.css" />
+  </head>
+  <body>
+    <div id="page">
+      <div id="content">
+        <h1>
+          <span class="endpoint-name ">
+  <span class="verb">GET</span>
+  <span class="root">https:&#8203;/&#8203;/api.sample.com&#8203;/members&#8203;/</span>
+  <span class="path">list&#8203;/filter</span>
+  
+</span>
+
+        </h1>
+
+        <div id="nav">
+          
+            <a href="/index.html">
+              &#187; fdoc Sample API
+            </a>
+          
+          
+            <a href="/members_api/index.html">&#187; Members API</a>
+          
+        </div>
+
+        <p>The list of members, filtered by params</p>
+
+
+        
+              <h2 id="request">
+      <a href="#request" class="anchor">
+        Request
+      </a>
+    </h2>
+
+
+              <h3 id="example_request">
+      <a href="#example_request" class="anchor">
+        Example Request
+      </a>
+    </h3>
+
+          <div class="CodeRay"><pre>{
+  <span class="key"><span class="delimiter">&quot;</span><span class="content">limit</span><span class="delimiter">&quot;</span></span>: <span class="integer">50</span>,
+  <span class="key"><span class="delimiter">&quot;</span><span class="content">offset</span><span class="delimiter">&quot;</span></span>: <span class="integer">0</span>,
+  <span class="key"><span class="delimiter">&quot;</span><span class="content">older_than</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="delimiter">&quot;</span></span>,
+  <span class="key"><span class="delimiter">&quot;</span><span class="content">newer_than</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="delimiter">&quot;</span></span>
+}</pre></div>
+
+              <h3 id="request_parameters">
+      <a href="#request_parameters" class="anchor">
+        Request Parameters
+      </a>
+    </h3>
+
+          <div class="schema"><ul><li>    <span id="limit--221487004">
+      <a href="#limit--221487004" class="anchor">
+        <tt>limit</tt>
+      </a>
+    </span>
+<div class="schema"><p>Limits the number of results returned, used for paging.</p>
+<ul><li>Required: no</li><li>Type: integer</li></ul></div></li><li>    <span id="offset--271130217">
+      <a href="#offset--271130217" class="anchor">
+        <tt>offset</tt>
+      </a>
+    </span>
+<div class="schema"><p>Offsets the results returned, used for paging.</p>
+<ul><li>Required: no</li><li>Type: integer</li></ul></div></li><li>    <span id="older_than--89539281">
+      <a href="#older_than--89539281" class="anchor">
+        <tt>older_than</tt>
+      </a>
+    </span>
+<div class="schema"><p>If provided, results returned will only be updated before
+the given date (exclusive)</p>
+<ul><li>Required: no</li><li>Type: string</li><li>Format: date-time</li></ul></div></li><li>    <span id="newer_than--545584577">
+      <a href="#newer_than--545584577" class="anchor">
+        <tt>newer_than</tt>
+      </a>
+    </span>
+<div class="schema"><p>If provided, results returned will only be updated after
+the given date (inclusive)</p>
+<ul><li>Required: no</li><li>Type: string</li><li>Format: date-time</li></ul></div></li></ul></div>
+        
+
+            <h2 id="response">
+      <a href="#response" class="anchor">
+        Response
+      </a>
+    </h2>
+
+        
+              <h3 id="example_response">
+      <a href="#example_response" class="anchor">
+        Example Response
+      </a>
+    </h3>
+
+          <div class="CodeRay"><pre>{
+  <span class="key"><span class="delimiter">&quot;</span><span class="content">members</span><span class="delimiter">&quot;</span></span>: [
+    {
+      <span class="key"><span class="delimiter">&quot;</span><span class="content">name</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">Captain Smellypants</span><span class="delimiter">&quot;</span></span>,
+      <span class="key"><span class="delimiter">&quot;</span><span class="content">email</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">smelly@pants.com</span><span class="delimiter">&quot;</span></span>,
+      <span class="key"><span class="delimiter">&quot;</span><span class="content">member_since</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">2012-01-01 13:00:00 UTC</span><span class="delimiter">&quot;</span></span>
+    }
+  ]
+}</pre></div>
+
+              <h3 id="response_parameters">
+      <a href="#response_parameters" class="anchor">
+        Response Parameters
+      </a>
+    </h3>
+
+          <div class="schema"><ul><li>    <span id="members-314076634">
+      <a href="#members-314076634" class="anchor">
+        <tt>members</tt>
+      </a>
+    </span>
+<div class="schema"><ul><li>Required: no</li><li>Type: array</li><li>Items<div class="schema"><p>Representation of a member</p>
+<ul><li>Required: no</li><li>title: member</li><li>    <span id="name--426252266">
+      <a href="#name--426252266" class="anchor">
+        <tt>name</tt>
+      </a>
+    </span>
+<div class="schema"><p>Member&#8217;s name</p>
+<ul><li>Required: yes</li><li>Type: string</li><li>Example: <tt>&quot;Captain Smellypants&quot;</tt></li></ul></div></li><li>    <span id="email--695628251">
+      <a href="#email--695628251" class="anchor">
+        <tt>email</tt>
+      </a>
+    </span>
+<div class="schema"><p>Member&#8217;s email</p>
+<ul><li>Required: no</li><li>Type: string</li><li>Example: <tt>&quot;smelly@pants.com&quot;</tt></li></ul></div></li><li>    <span id="member_since--543529931">
+      <a href="#member_since--543529931" class="anchor">
+        <tt>member_since</tt>
+      </a>
+    </span>
+<div class="schema"><p>The date the member joined</p>
+<ul><li>Required: no</li><li>Type: string</li><li>Format: date-time</li><li>Example: </li></ul></div></li></ul></div></li></ul></div></li></ul></div>
+        
+
+            <h3 id="response_codes">
+      <a href="#response_codes" class="anchor">
+        Response Codes
+      </a>
+    </h3>
+
+        
+              <h4 id="successful_response_codes">
+      <a href="#successful_response_codes" class="anchor">
+        Successful Response Codes
+      </a>
+    </h4>
+
+          <ul>
+            
+            <li>
+                    <div class="response-code">
+        <span class="status">
+          200 OK
+        </span>
+        <p>A list of current members</p>
+
+      </div>
+
+            </li>
+            
+          </ul>
+        
+
+        
+              <h4 id="failure_response_codes">
+      <a href="#failure_response_codes" class="anchor">
+        Failure Response Codes
+      </a>
+    </h4>
+
+          <ul>
+            
+            <li>
+                    <div class="response-code">
+        <span class="status">
+          400 Bad Request
+        </span>
+        <p>Indicates malformed parameters</p>
+
+      </div>
+
+            </li>
+            
+          </ul>
+        
+      </div>
+    </div>
+  </body>
+</html>
+
