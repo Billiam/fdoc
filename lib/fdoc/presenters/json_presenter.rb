@@ -1,5 +1,7 @@
 require 'erb'
 require 'json'
+require 'coderay'
+
 class Fdoc::JsonPresenter
   attr_reader :json
 
@@ -16,7 +18,7 @@ class Fdoc::JsonPresenter
       '<tt>%s</tt>' % json
     elsif json.kind_of?(Hash) ||
           json.kind_of?(Array)
-      '<pre><code>%s</code></pre>' % JSON.pretty_generate(json)
+      '<div class="CodeRay"><pre>%s</pre></div>' % CodeRay.scan(JSON.pretty_generate(json), :json).div(wrap: nil, css: :class)
     end
   end
 
