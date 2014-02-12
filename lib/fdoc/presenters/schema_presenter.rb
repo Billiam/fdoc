@@ -65,7 +65,7 @@ class Fdoc::SchemaPresenter < Fdoc::BasePresenter
     md << "\n#{prefix}* __Required__: #{required?}" if nested?
     md << "\n#{prefix}* __Type__: #{type}" if type
     md << "\n#{prefix}* __Format__: #{format}" if format
-    md << "\n#{prefix}* __Example__: <tt>#{example.to_markdown}</tt>" if example
+    md << "\n#{prefix}* __Example__: <code>#{example.to_markdown}</code>" if example
     md << "\n#{@schema['enum']}"
     (@schema.keys - Fdoc::SchemaPresenter::FORMATTED_KEYS).each do |key|
       md << "\n#{prefix}* %{key} %{@schema[key]}"
@@ -130,7 +130,7 @@ class Fdoc::SchemaPresenter < Fdoc::BasePresenter
     return unless enum
 
     list = enum.map do |e|
-      '<tt>%s</tt>' % e
+      '<code>%s</code>' % e
     end.join(", ")
 
     html = StringIO.new
@@ -170,7 +170,7 @@ class Fdoc::SchemaPresenter < Fdoc::BasePresenter
       html << '<li>'
       html << tag_with_anchor(
         'span',
-        '<tt>%s</tt>' % key,
+        '<code>%s</code>' % key,
         schema_slug(key, property)
       )
       html << self.class.new(property, options.merge(:nested => true)).to_html

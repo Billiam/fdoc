@@ -11,11 +11,11 @@ class Fdoc::JsonPresenter
 
   def to_html
     if json.kind_of? String
-      '<tt>&quot;%s&quot;</tt>' % json.gsub(/\"/, 'quot;')
+      '<code>&quot;%s&quot;</code>' % json.gsub(/\"/, 'quot;')
     elsif json.kind_of?(Numeric) ||
           json.kind_of?(TrueClass) ||
           json.kind_of?(FalseClass)
-      '<tt>%s</tt>' % json
+      '<code>%s</code>' % json
     elsif json.kind_of?(Hash) ||
           json.kind_of?(Array)
       '<div class="CodeRay"><pre>%s</pre></div>' % CodeRay.scan(JSON.pretty_generate(json), :json).div(wrap: nil, css: :class)
