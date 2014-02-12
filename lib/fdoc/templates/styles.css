@@ -60,7 +60,7 @@ p {
 .endpoint-name .root {}
 .endpoint-name .path { font-weight: bold; }
 
-a .endpoint-name .verb { display: inline-block; width: 3em; text-align: right; font-size:80% }
+a .endpoint-name .verb { display: inline-block; width: 3.5em; text-align: right; font-size:80% }
 
 .endpoint-name.deprecated { color: gray; }
 .schema ul span.deprecated { margin-left:.5em; font-size: 80%; color: red }
