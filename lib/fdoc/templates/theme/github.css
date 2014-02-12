@@ -1,32 +1,15 @@
-pre code { display: block; }
-tt, kbd, code {
-  font-family: Consolas, 'Liberation Mono', Courier, monospace;
-  font-size: 80%;
-  background: #f8f8f8;
-  padding: 1px 5px;
-  border: 1px solid #ddd;
-  white-space: pre-wrap;
-  color: #333;
-  border-radius: 3px;
-}
-
-
-.CodeRay {
+.code-section pre {
   background-color: #f8f8f8;
   border: 1px solid #ddd;
   color: #333;
   border-radius: 3px;
   padding: 1em 0px 1em 1em;
-}
 
-.CodeRay pre {
-  border-radius: 3px;
   margin: 0px;
   font-family: Consolas, 'Liberation Mono', Courier, monospace;
   font-size: 12px;
 }
 
-div.CodeRay { }
 span.CodeRay { white-space: pre; border: 0px; padding: 2px }
 
 table.CodeRay { border-collapse: collapse; width: 100%; padding: 2px }
