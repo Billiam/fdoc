@@ -5,26 +5,52 @@
 <% if show_request? %>
 ## Request
 ### Example Request
+<% if show_request_headers? %>
+```
+<%= example_request_headers.to_markdown %>
+```
+<% end %>
+
 ```
 <%= example_request.to_markdown %>
 ```
 
-### Example Parameters
+<% if show_request_headers? %>
+### Request Headers
+<%= request_headers.to_markdown %>
+<% end %>
+
+### Request Parameters
 <%= request_parameters.to_markdown %>
 <% end %>
 
 ## Response
 <% if show_response? %>
 ### Example Response
+
+<% if show_response_headers? %>
+```
+<%= example_response_headers.to_markdown %>
+```
+<% end %>
+
 ```
 <%= example_response.to_markdown %>
 ```
+
+<% if show_request_headers? %>
+### Response Headers
+<%= response_headers.to_markdown %>
+<% end %>
 
 ### Response Parameters
 <%= response_parameters.to_markdown %>
 <% end %>
 
+<% unless (successful_response_codes + failure_response_codes).empty? %>
 ### Response Codes
+<% end %>
+
 <% if !successful_response_codes.empty? %>
 #### Successful Response Codes
 <% successful_response_codes.each do |response_code| %>

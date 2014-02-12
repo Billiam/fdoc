@@ -10,9 +10,15 @@ properties:
   requestParameters:
     type: object
     description: A schema for the request parameters
+  requestHeaders:
+    type: object
+    description: A schema for the request headers
   responseParameters:
     type: object
     description: A schema for the response parameters
+  responseHeaders:
+    type: object
+    description: A schema for the response headers
   responseCodes:
     type: array
     required: yes

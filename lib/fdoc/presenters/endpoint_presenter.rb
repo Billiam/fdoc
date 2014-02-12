@@ -45,6 +45,14 @@ class Fdoc::EndpointPresenter < Fdoc::BasePresenter
     !endpoint.response_parameters.empty?
   end
 
+  def show_request_headers?
+    !endpoint.request_headers.empty?
+  end
+
+   def show_response_headers?
+    !endpoint.response_headers.empty?
+  end
+
   def request_parameters
     Fdoc::SchemaPresenter.new(endpoint.request_parameters,
       options.merge(:request => true)
@@ -53,6 +61,16 @@ class Fdoc::EndpointPresenter < Fdoc::BasePresenter
 
   def response_parameters
     Fdoc::SchemaPresenter.new(endpoint.response_parameters, options)
+  end
+
+  def request_headers
+    Fdoc::SchemaPresenter.new(endpoint.request_headers,
+      options.merge(:request => true)
+    )
+  end
+
+  def response_headers
+    Fdoc::SchemaPresenter.new(endpoint.response_headers, options)
   end
 
   def response_codes
@@ -75,6 +93,14 @@ class Fdoc::EndpointPresenter < Fdoc::BasePresenter
 
   def example_response
     Fdoc::JsonPresenter.new(example_from_schema(endpoint.response_parameters))
+  end
+
+  def example_request_headers
+    Fdoc::HeaderPresenter.new(example_from_schema(endpoint.request_headers))
+  end
+
+  def example_response_headers
+    Fdoc::HeaderPresenter.new(example_from_schema(endpoint.response_headers))
   end
 
   def deprecated?
