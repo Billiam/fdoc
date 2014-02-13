@@ -66,8 +66,16 @@ class Fdoc::Endpoint
     @schema["requestParameters"] ||= {}
   end
 
+  def request_headers
+    @schema["requestHeaders"] ||= {}
+  end
+
   def response_parameters
     @schema["responseParameters"] ||= {}
+  end
+
+  def response_headers
+    @schema["responseHeaders"] ||= {}
   end
 
   def response_codes

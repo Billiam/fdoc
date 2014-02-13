@@ -1,3 +1,15 @@
+requestHeaders:
+  properties:
+    Accept:
+      type: string
+      required: no
+      description: Acceptable media types
+      example: application/json
+    X-Requested-With:
+      type: string
+      required: no
+      description: Identify requests made via ajax.
+      example: XMLHttpRequest
 requestParameters:
   type: object
   properties:
@@ -84,7 +96,13 @@ requestParameters:
               required: no
               description: It's optional
               type: string
-
+responseHeaders:
+  properties:
+    Content-Length:
+      type: string
+      required: true
+      description: Length of body in bytes
+      example: 2048
 responseParameters:
   type: string
   description: Nothing important

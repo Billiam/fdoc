@@ -1,43 +1,58 @@
+html {
+  font-size: 100%;
+}
 
 body {
-  font: 11pt/14pt "Helvetica Neue", Helvetica, sans-serif;
+  font: 15px/1.5 "Helvetica Neue", Helvetica, sans-serif;
   margin: 0;
   padding: 0;
   color: #333;
+  background-color: #fefefe;
 }
 
 #page {
-  background: white;
   margin: 0 auto;
-  width: 540pt;
+  max-width: 720px;
+  min-width: 540px;
 }
 
 #content {
-  padding: 0 12pt 2em 12pt;
+  padding: 0 12px 2em 12px;
 }
 
 #nav { padding-bottom: 1em; }
 
 h1, h2 {
-  margin: 0 -12pt;
-  padding: .5em 12pt;
-  line-height: 1.2em;
+  margin: 0 -12px;
+  padding: .5em 12px;
+  line-height: 1.2;
 }
 
-h1 { font-weight: bold; }
+h1 {
+  font-weight: bold;
+  font-size: 29px;
+}
+h2 {
+  font-size: 22px;
+}
+h3 {
+  font-size: 17px;
+}
+
 h1, h2, h3 { font-weight: 200; }
 
 a { text-decoration: none; color: #66f; }
 a:hover, a:active { text-decoration: underline; }
 
-a.anchor { color: inherit; }
+a.anchor { color: inherit;
+}
 a.anchor:hover, a.anchor:active { text-decoration: none;}
 a.anchor:hover::before, a.anchor.active::before {
   background: white;
   display: inline-block;
   position: absolute;
   content: '\0261E';
-  font-size: 120%;
+  font-size: 12px;
   font-weight: bold;
   margin-left: -1.2em;
 }
@@ -55,12 +70,56 @@ p {
   padding: 0;
 }
 
-.endpoint-name {}
 .endpoint-name .verb { font-weight: bold; }
 .endpoint-name .root {}
 .endpoint-name .path { font-weight: bold; }
 
-a .endpoint-name .verb { display: inline-block; width: 3.5em; text-align: right; font-size:80% }
+a .endpoint-name .verb {
+    display: inline-block;
+    width: 3.5em;
+    text-align: right;
+    font-size:12px;
+}
 
 .endpoint-name.deprecated { color: gray; }
-.schema ul span.deprecated { margin-left:.5em; font-size: 80%; color: red }
+.schema ul span.deprecated {
+    margin-left:.5em;
+    font-size: 12px;
+    color: red
+}
+
+.example-body:after,
+.example-headers:after {
+  content: "body";
+  position: absolute;
+  top: 1px;
+  right: 4px;
+  text-align: right;
+  color: #bbb;
+  text-transform: uppercase;
+  font-size: 9px;
+}
+
+.example-headers:after {
+  content: "headers";
+}
+
+pre code,
+.code-section code {
+  display: block;
+}
+tt, kbd, code {
+  font-family: Consolas, 'Liberation Mono', Courier, monospace;
+  font-size: 12px;
+  background: #f8f8f8;
+  padding: 1px 5px;
+  border: 1px solid #ddd;
+  white-space: pre-wrap;
+  color: #333;
+  border-radius: 3px;
+}
+
+.code-section {
+  position: relative;
+  margin-bottom: 5px;
+}
