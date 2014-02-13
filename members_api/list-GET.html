@@ -5,8 +5,8 @@
       GET list - Members API
     </title>
     <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-    <link rel="stylesheet" type="text/css" href="/fdoc/styles.css" />
-    <link rel="stylesheet" type="text/css" href="/fdoc/github.css" />
+    <link rel="stylesheet" type="text/css" href="/styles.css" />
+    <link rel="stylesheet" type="text/css" href="/github.css" />
   </head>
   <body>
     <div id="page">
@@ -14,8 +14,7 @@
         <h1>
           <span class="endpoint-name ">
   <span class="verb">GET</span>
-  <span class="root">https:&#8203;/&#8203;/api.sample.com&#8203;/members&#8203;/</span>
-  <span class="path">list</span>
+  <span class="root">https:&#8203;/&#8203;/api.sample.com&#8203;/members&#8203;/</span><span class="path">list</span>
   
 </span>
 
@@ -23,12 +22,12 @@
 
         <div id="nav">
           
-            <a href="/fdoc/index.html">
+            <a href="/index.html">
               &#187; fdoc Sample API
             </a>
           
           
-            <a href="/fdoc/members_api/index.html">&#187; Members API</a>
+            <a href="/members_api/index.html">&#187; Members API</a>
           
         </div>
 
@@ -42,18 +41,40 @@
       </a>
     </h2>
 
-
               <h3 id="example_request">
       <a href="#example_request" class="anchor">
         Example Request
       </a>
     </h3>
 
-          <div class="CodeRay"><pre>{
+
+          
+            <div class="code-section example-headers"><pre>Accept: application/json</pre></div>
+          
+
+          <div class="code-section example-body">
+            <pre class="CodeRay">{
   <span class="key"><span class="delimiter">&quot;</span><span class="content">limit</span><span class="delimiter">&quot;</span></span>: <span class="integer">50</span>,
   <span class="key"><span class="delimiter">&quot;</span><span class="content">offset</span><span class="delimiter">&quot;</span></span>: <span class="integer">0</span>,
   <span class="key"><span class="delimiter">&quot;</span><span class="content">order_by</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="delimiter">&quot;</span></span>
-}</pre></div>
+}</pre>
+          </div>
+
+          
+                <h3 id="request_headers">
+      <a href="#request_headers" class="anchor">
+        Request Headers
+      </a>
+    </h3>
+
+            <div class="schema"><ul><li>    <span id="Accept--45146774">
+      <a href="#Accept--45146774" class="anchor">
+        <code>Accept</code>
+      </a>
+    </span>
+<div class="schema"><p>Acceptable media types</p>
+<ul><li>Required: no</li><li>Type: string</li><li>Example: <code>&quot;application/json&quot;</code></li></ul></div></li></ul></div>
+          
 
               <h3 id="request_parameters">
       <a href="#request_parameters" class="anchor">
@@ -61,40 +82,46 @@
       </a>
     </h3>
 
-          <div class="schema"><ul><li>    <span id="limit-787689521">
-      <a href="#limit-787689521" class="anchor">
-        <tt>limit</tt>
+          <div class="schema"><ul><li>    <span id="limit--538974093">
+      <a href="#limit--538974093" class="anchor">
+        <code>limit</code>
       </a>
     </span>
 <div class="schema"><p>Limits the number of results returned, used for paging.</p>
-<ul><li>Required: no</li><li>Type: integer</li></ul></div></li><li>    <span id="offset--603101759">
-      <a href="#offset--603101759" class="anchor">
-        <tt>offset</tt>
+<ul><li>Required: no</li><li>Type: integer</li></ul></div></li><li>    <span id="offset--926486498">
+      <a href="#offset--926486498" class="anchor">
+        <code>offset</code>
       </a>
     </span>
 <div class="schema"><p>Offsets the results returned, used for paging.</p>
-<ul><li>Required: no</li><li>Type: integer</li></ul></div></li><li>    <span id="order_by-235822204">
-      <a href="#order_by-235822204" class="anchor">
-        <tt>order_by</tt>
+<ul><li>Required: no</li><li>Type: integer</li></ul></div></li><li>    <span id="order_by--118796954">
+      <a href="#order_by--118796954" class="anchor">
+        <code>order_by</code>
       </a>
     </span>
-<div class="schema"><ul><li>Required: no</li><li>Type: string</li><li>Enum: <tt>name</tt>, <tt>email</tt>, <tt>member_since</tt></li></ul></div></li></ul></div>
+<div class="schema"><ul><li>Required: no</li><li>Type: string</li><li>Enum: <code>name</code>, <code>email</code>, <code>member_since</code></li></ul></div></li></ul></div>
         
 
-            <h2 id="response">
+        
+              <h2 id="response">
       <a href="#response" class="anchor">
         Response
       </a>
     </h2>
 
-        
               <h3 id="example_response">
       <a href="#example_response" class="anchor">
         Example Response
       </a>
     </h3>
 
-          <div class="CodeRay"><pre>{
+
+          
+            <div class="code-section example-headers"><pre>Content-Type: application/json</pre></div>
+          
+
+          <div class="code-section example-body">
+            <pre class="CodeRay">{
   <span class="key"><span class="delimiter">&quot;</span><span class="content">members</span><span class="delimiter">&quot;</span></span>: [
     {
       <span class="key"><span class="delimiter">&quot;</span><span class="content">name</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">Captain Smellypants</span><span class="delimiter">&quot;</span></span>,
@@ -102,7 +129,24 @@
       <span class="key"><span class="delimiter">&quot;</span><span class="content">member_since</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">2012-01-01 13:00:00 UTC</span><span class="delimiter">&quot;</span></span>
     }
   ]
-}</pre></div>
+}</pre>
+          </div>
+
+          
+                <h3 id="response_headers">
+      <a href="#response_headers" class="anchor">
+        Response Headers
+      </a>
+    </h3>
+
+            <div class="schema"><ul><li>    <span id="Content-Type--870516888">
+      <a href="#Content-Type--870516888" class="anchor">
+        <code>Content-Type</code>
+      </a>
+    </span>
+<div class="schema"><p>Response format</p>
+<ul><li>Required: yes</li><li>Type: string</li><li>Example: <code>&quot;application/json&quot;</code></li></ul></div></li></ul></div>
+          
 
               <h3 id="response_parameters">
       <a href="#response_parameters" class="anchor">
@@ -110,38 +154,41 @@
       </a>
     </h3>
 
-          <div class="schema"><ul><li>    <span id="members-585176677">
-      <a href="#members-585176677" class="anchor">
-        <tt>members</tt>
+          <div class="schema"><ul><li>    <span id="members-475607325">
+      <a href="#members-475607325" class="anchor">
+        <code>members</code>
       </a>
     </span>
 <div class="schema"><ul><li>Required: no</li><li>Type: array</li><li>Items<div class="schema"><p>Representation of a member</p>
-<ul><li>Required: no</li><li>title: member</li><li>    <span id="name--575759836">
-      <a href="#name--575759836" class="anchor">
-        <tt>name</tt>
+<ul><li>Required: no</li><li>title: member</li><li>    <span id="name-521984172">
+      <a href="#name-521984172" class="anchor">
+        <code>name</code>
       </a>
     </span>
 <div class="schema"><p>Member&#8217;s name</p>
-<ul><li>Required: yes</li><li>Type: string</li><li>Example: <tt>&quot;Captain Smellypants&quot;</tt></li></ul></div></li><li>    <span id="email-117938997">
-      <a href="#email-117938997" class="anchor">
-        <tt>email</tt>
+<ul><li>Required: yes</li><li>Type: string</li><li>Example: <code>&quot;Captain Smellypants&quot;</code></li></ul></div></li><li>    <span id="email-133619048">
+      <a href="#email-133619048" class="anchor">
+        <code>email</code>
       </a>
     </span>
 <div class="schema"><p>Member&#8217;s email</p>
-<ul><li>Required: no</li><li>Type: string</li><li>Example: <tt>&quot;smelly@pants.com&quot;</tt></li></ul></div></li><li>    <span id="member_since--492137888">
-      <a href="#member_since--492137888" class="anchor">
-        <tt>member_since</tt>
+<ul><li>Required: no</li><li>Type: string</li><li>Example: <code>&quot;smelly@pants.com&quot;</code></li></ul></div></li><li>    <span id="member_since-906983950">
+      <a href="#member_since-906983950" class="anchor">
+        <code>member_since</code>
       </a>
     </span>
 <div class="schema"><p>The date the member joined</p>
 <ul><li>Required: no</li><li>Type: string</li><li>Format: date-time</li><li>Example: </li></ul></div></li></ul></div></li></ul></div></li></ul></div>
         
 
-            <h3 id="response_codes">
+        
+                <h3 id="response_codes">
       <a href="#response_codes" class="anchor">
         Response Codes
       </a>
     </h3>
+
+        
 
         
               <h4 id="successful_response_codes">

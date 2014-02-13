@@ -5,8 +5,8 @@
       PUT add - Members API
     </title>
     <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-    <link rel="stylesheet" type="text/css" href="/fdoc/styles.css" />
-    <link rel="stylesheet" type="text/css" href="/fdoc/github.css" />
+    <link rel="stylesheet" type="text/css" href="/styles.css" />
+    <link rel="stylesheet" type="text/css" href="/github.css" />
   </head>
   <body>
     <div id="page">
@@ -14,8 +14,7 @@
         <h1>
           <span class="endpoint-name ">
   <span class="verb">PUT</span>
-  <span class="root">https:&#8203;/&#8203;/api.sample.com&#8203;/members&#8203;/</span>
-  <span class="path">add</span>
+  <span class="root">https:&#8203;/&#8203;/api.sample.com&#8203;/members&#8203;/</span><span class="path">add</span>
   
 </span>
 
@@ -23,12 +22,12 @@
 
         <div id="nav">
           
-            <a href="/fdoc/index.html">
+            <a href="/index.html">
               &#187; fdoc Sample API
             </a>
           
           
-            <a href="/fdoc/members_api/index.html">&#187; Members API</a>
+            <a href="/members_api/index.html">&#187; Members API</a>
           
         </div>
 
@@ -42,17 +41,39 @@
       </a>
     </h2>
 
-
               <h3 id="example_request">
       <a href="#example_request" class="anchor">
         Example Request
       </a>
     </h3>
 
-          <div class="CodeRay"><pre>{
+
+          
+            <div class="code-section example-headers"><pre>Accept: application/json, text/html</pre></div>
+          
+
+          <div class="code-section example-body">
+            <pre class="CodeRay">{
   <span class="key"><span class="delimiter">&quot;</span><span class="content">name</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">Max Power</span><span class="delimiter">&quot;</span></span>,
   <span class="key"><span class="delimiter">&quot;</span><span class="content">email</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">mpower@example.com</span><span class="delimiter">&quot;</span></span>
-}</pre></div>
+}</pre>
+          </div>
+
+          
+                <h3 id="request_headers">
+      <a href="#request_headers" class="anchor">
+        Request Headers
+      </a>
+    </h3>
+
+            <div class="schema"><ul><li>    <span id="Accept--981463253">
+      <a href="#Accept--981463253" class="anchor">
+        <code>Accept</code>
+      </a>
+    </span>
+<div class="schema"><p>Acceptable media types</p>
+<ul><li>Required: no</li><li>Type: string</li><li>Example: <code>&quot;application/json, text/html&quot;</code></li></ul></div></li></ul></div>
+          
 
               <h3 id="request_parameters">
       <a href="#request_parameters" class="anchor">
@@ -60,34 +81,31 @@
       </a>
     </h3>
 
-          <div class="schema"><ul><li>    <span id="name--235384468">
-      <a href="#name--235384468" class="anchor">
-        <tt>name</tt>
+          <div class="schema"><ul><li>    <span id="name-360338862">
+      <a href="#name-360338862" class="anchor">
+        <code>name</code>
       </a>
     </span>
 <div class="schema"><p>The name of the member to add, must be unique.</p>
-<ul><li>Required: yes</li><li>Type: string</li><li>Example: <tt>&quot;Max Power&quot;</tt></li></ul></div></li><li>    <span id="email--664708073">
-      <a href="#email--664708073" class="anchor">
-        <tt>email</tt>
+<ul><li>Required: yes</li><li>Type: string</li><li>Example: <code>&quot;Max Power&quot;</code></li></ul></div></li><li>    <span id="email-63607206">
+      <a href="#email-63607206" class="anchor">
+        <code>email</code>
       </a>
     </span>
 <div class="schema"><p>The email of the member to add</p>
-<ul><li>Required: no</li><li>Type: string</li><li>Example: <tt>&quot;mpower@example.com&quot;</tt></li></ul></div></li></ul></div>
+<ul><li>Required: no</li><li>Type: string</li><li>Example: <code>&quot;mpower@example.com&quot;</code></li></ul></div></li></ul></div>
         
-
-            <h2 id="response">
-      <a href="#response" class="anchor">
-        Response
-      </a>
-    </h2>
 
         
 
-            <h3 id="response_codes">
+        
+                <h3 id="response_codes">
       <a href="#response_codes" class="anchor">
         Response Codes
       </a>
     </h3>
+
+        
 
         
               <h4 id="successful_response_codes">

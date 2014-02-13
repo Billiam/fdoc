@@ -5,8 +5,8 @@
       GET list/complex-params - Members API
     </title>
     <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-    <link rel="stylesheet" type="text/css" href="/fdoc/styles.css" />
-    <link rel="stylesheet" type="text/css" href="/fdoc/github.css" />
+    <link rel="stylesheet" type="text/css" href="/styles.css" />
+    <link rel="stylesheet" type="text/css" href="/github.css" />
   </head>
   <body>
     <div id="page">
@@ -14,8 +14,7 @@
         <h1>
           <span class="endpoint-name ">
   <span class="verb">GET</span>
-  <span class="root">https:&#8203;/&#8203;/api.sample.com&#8203;/members&#8203;/</span>
-  <span class="path">list&#8203;/complex-params</span>
+  <span class="root">https:&#8203;/&#8203;/api.sample.com&#8203;/members&#8203;/</span><span class="path">list&#8203;/complex-params</span>
   
 </span>
 
@@ -23,12 +22,12 @@
 
         <div id="nav">
           
-            <a href="/fdoc/index.html">
+            <a href="/index.html">
               &#187; fdoc Sample API
             </a>
           
           
-            <a href="/fdoc/members_api/index.html">&#187; Members API</a>
+            <a href="/members_api/index.html">&#187; Members API</a>
           
         </div>
 
@@ -41,14 +40,20 @@
       </a>
     </h2>
 
-
               <h3 id="example_request">
       <a href="#example_request" class="anchor">
         Example Request
       </a>
     </h3>
 
-          <div class="CodeRay"><pre>{
+
+          
+            <div class="code-section example-headers"><pre>Accept: application/json
+X-Requested-With: XMLHttpRequest</pre></div>
+          
+
+          <div class="code-section example-body">
+            <pre class="CodeRay">{
   <span class="key"><span class="delimiter">&quot;</span><span class="content">toplevel_param</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="delimiter">&quot;</span></span>,
   <span class="key"><span class="delimiter">&quot;</span><span class="content">optional_nested_array</span><span class="delimiter">&quot;</span></span>: [
     {
@@ -78,7 +83,30 @@
       <span class="key"><span class="delimiter">&quot;</span><span class="content">optional_param</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="delimiter">&quot;</span></span>
     }
   }
-}</pre></div>
+}</pre>
+          </div>
+
+          
+                <h3 id="request_headers">
+      <a href="#request_headers" class="anchor">
+        Request Headers
+      </a>
+    </h3>
+
+            <div class="schema"><ul><li>    <span id="Accept--45146774">
+      <a href="#Accept--45146774" class="anchor">
+        <code>Accept</code>
+      </a>
+    </span>
+<div class="schema"><p>Acceptable media types</p>
+<ul><li>Required: no</li><li>Type: string</li><li>Example: <code>&quot;application/json&quot;</code></li></ul></div></li><li>    <span id="X-Requested-With-969207095">
+      <a href="#X-Requested-With-969207095" class="anchor">
+        <code>X-Requested-With</code>
+      </a>
+    </span>
+<div class="schema"><p>Identify requests made via ajax.</p>
+<ul><li>Required: no</li><li>Type: string</li><li>Example: <code>&quot;XMLHttpRequest&quot;</code></li></ul></div></li></ul></div>
+          
 
               <h3 id="request_parameters">
       <a href="#request_parameters" class="anchor">
@@ -86,133 +114,156 @@
       </a>
     </h3>
 
-          <div class="schema"><ul><li>    <span id="toplevel_param-200875041">
-      <a href="#toplevel_param-200875041" class="anchor">
-        <tt>toplevel_param</tt>
+          <div class="schema"><ul><li>    <span id="toplevel_param--828132721">
+      <a href="#toplevel_param--828132721" class="anchor">
+        <code>toplevel_param</code>
       </a>
     </span>
 <div class="schema"><p>A paramater as normal</p>
-<ul><li>Required: yes</li><li>Type: string</li></ul></div></li><li>    <span id="optional_nested_array--884371355">
-      <a href="#optional_nested_array--884371355" class="anchor">
-        <tt>optional_nested_array</tt>
+<ul><li>Required: yes</li><li>Type: string</li></ul></div></li><li>    <span id="optional_nested_array-438192993">
+      <a href="#optional_nested_array-438192993" class="anchor">
+        <code>optional_nested_array</code>
       </a>
     </span>
-<div class="schema"><ul><li>Required: no</li><li>Type: array</li><li>Items<div class="schema"><ul><li>Required: no</li><li>    <span id="required_param-994367058">
-      <a href="#required_param-994367058" class="anchor">
-        <tt>required_param</tt>
-      </a>
-    </span>
-<div class="schema"><p>It&#8217;s required</p>
-<ul><li>Required: yes</li><li>Type: string</li></ul></div></li><li>    <span id="optional_param--1033234447">
-      <a href="#optional_param--1033234447" class="anchor">
-        <tt>optional_param</tt>
-      </a>
-    </span>
-<div class="schema"><p>It&#8217;s optional</p>
-<ul><li>Required: yes</li><li>Type: string</li></ul></div></li></ul></div></li></ul></div></li><li>    <span id="required_nested_array--353848644">
-      <a href="#required_nested_array--353848644" class="anchor">
-        <tt>required_nested_array</tt>
-      </a>
-    </span>
-<div class="schema"><ul><li>Required: yes</li><li>Type: array</li><li>Items<div class="schema"><ul><li>Required: no</li><li>    <span id="required_param-994367058">
-      <a href="#required_param-994367058" class="anchor">
-        <tt>required_param</tt>
+<div class="schema"><ul><li>Required: no</li><li>Type: array</li><li>Items<div class="schema"><ul><li>Required: no</li><li>    <span id="required_param--1026891718">
+      <a href="#required_param--1026891718" class="anchor">
+        <code>required_param</code>
       </a>
     </span>
 <div class="schema"><p>It&#8217;s required</p>
-<ul><li>Required: yes</li><li>Type: string</li></ul></div></li><li>    <span id="optional_param-156621745">
-      <a href="#optional_param-156621745" class="anchor">
-        <tt>optional_param</tt>
+<ul><li>Required: yes</li><li>Type: string</li></ul></div></li><li>    <span id="optional_param--325361914">
+      <a href="#optional_param--325361914" class="anchor">
+        <code>optional_param</code>
       </a>
     </span>
 <div class="schema"><p>It&#8217;s optional</p>
-<ul><li>Required: no</li><li>Type: string</li></ul></div></li><li>    <span id="optional_second_nested_object--134725144">
-      <a href="#optional_second_nested_object--134725144" class="anchor">
-        <tt>optional_second_nested_object</tt>
+<ul><li>Required: yes</li><li>Type: string</li></ul></div></li></ul></div></li></ul></div></li><li>    <span id="required_nested_array--984806429">
+      <a href="#required_nested_array--984806429" class="anchor">
+        <code>required_nested_array</code>
+      </a>
+    </span>
+<div class="schema"><ul><li>Required: yes</li><li>Type: array</li><li>Items<div class="schema"><ul><li>Required: no</li><li>    <span id="required_param--1026891718">
+      <a href="#required_param--1026891718" class="anchor">
+        <code>required_param</code>
+      </a>
+    </span>
+<div class="schema"><p>It&#8217;s required</p>
+<ul><li>Required: yes</li><li>Type: string</li></ul></div></li><li>    <span id="optional_param-1020913361">
+      <a href="#optional_param-1020913361" class="anchor">
+        <code>optional_param</code>
+      </a>
+    </span>
+<div class="schema"><p>It&#8217;s optional</p>
+<ul><li>Required: no</li><li>Type: string</li></ul></div></li><li>    <span id="optional_second_nested_object-512630408">
+      <a href="#optional_second_nested_object-512630408" class="anchor">
+        <code>optional_second_nested_object</code>
       </a>
     </span>
 <div class="schema"><p>It&#8217;s a bug</p>
-<ul><li>Required: no</li><li>    <span id="required_param-994367058">
-      <a href="#required_param-994367058" class="anchor">
-        <tt>required_param</tt>
+<ul><li>Required: no</li><li>    <span id="required_param--1026891718">
+      <a href="#required_param--1026891718" class="anchor">
+        <code>required_param</code>
       </a>
     </span>
 <div class="schema"><p>It&#8217;s required</p>
-<ul><li>Required: yes</li><li>Type: string</li></ul></div></li><li>    <span id="optional_param-156621745">
-      <a href="#optional_param-156621745" class="anchor">
-        <tt>optional_param</tt>
+<ul><li>Required: yes</li><li>Type: string</li></ul></div></li><li>    <span id="optional_param-1020913361">
+      <a href="#optional_param-1020913361" class="anchor">
+        <code>optional_param</code>
       </a>
     </span>
 <div class="schema"><p>It&#8217;s optional</p>
-<ul><li>Required: no</li><li>Type: string</li></ul></div></li></ul></div></li></ul></div></li></ul></div></li><li>    <span id="optional_nested_object-874275420">
-      <a href="#optional_nested_object-874275420" class="anchor">
-        <tt>optional_nested_object</tt>
+<ul><li>Required: no</li><li>Type: string</li></ul></div></li></ul></div></li></ul></div></li></ul></div></li><li>    <span id="optional_nested_object-124217753">
+      <a href="#optional_nested_object-124217753" class="anchor">
+        <code>optional_nested_object</code>
       </a>
     </span>
-<div class="schema"><ul><li>Required: no</li><li>    <span id="required_param-994367058">
-      <a href="#required_param-994367058" class="anchor">
-        <tt>required_param</tt>
+<div class="schema"><ul><li>Required: no</li><li>    <span id="required_param--1026891718">
+      <a href="#required_param--1026891718" class="anchor">
+        <code>required_param</code>
       </a>
     </span>
 <div class="schema"><p>It&#8217;s required</p>
-<ul><li>Required: yes</li><li>Type: string</li></ul></div></li><li>    <span id="optional_param-156621745">
-      <a href="#optional_param-156621745" class="anchor">
-        <tt>optional_param</tt>
+<ul><li>Required: yes</li><li>Type: string</li></ul></div></li><li>    <span id="optional_param-1020913361">
+      <a href="#optional_param-1020913361" class="anchor">
+        <code>optional_param</code>
       </a>
     </span>
 <div class="schema"><p>It&#8217;s optional</p>
-<ul><li>Required: no</li><li>Type: string</li></ul></div></li></ul></div></li><li>    <span id="required_nested_object--151508860">
-      <a href="#required_nested_object--151508860" class="anchor">
-        <tt>required_nested_object</tt>
+<ul><li>Required: no</li><li>Type: string</li></ul></div></li></ul></div></li><li>    <span id="required_nested_object-773821301">
+      <a href="#required_nested_object-773821301" class="anchor">
+        <code>required_nested_object</code>
       </a>
     </span>
-<div class="schema"><ul><li>Required: yes</li><li>    <span id="required_param-994367058">
-      <a href="#required_param-994367058" class="anchor">
-        <tt>required_param</tt>
+<div class="schema"><ul><li>Required: yes</li><li>    <span id="required_param--1026891718">
+      <a href="#required_param--1026891718" class="anchor">
+        <code>required_param</code>
       </a>
     </span>
 <div class="schema"><p>It&#8217;s required</p>
-<ul><li>Required: yes</li><li>Type: string</li></ul></div></li><li>    <span id="optional_param-156621745">
-      <a href="#optional_param-156621745" class="anchor">
-        <tt>optional_param</tt>
+<ul><li>Required: yes</li><li>Type: string</li></ul></div></li><li>    <span id="optional_param-1020913361">
+      <a href="#optional_param-1020913361" class="anchor">
+        <code>optional_param</code>
       </a>
     </span>
 <div class="schema"><p>It&#8217;s optional</p>
-<ul><li>Required: no</li><li>Type: string</li></ul></div></li><li>    <span id="optional_second_nested_object--134725144">
-      <a href="#optional_second_nested_object--134725144" class="anchor">
-        <tt>optional_second_nested_object</tt>
+<ul><li>Required: no</li><li>Type: string</li></ul></div></li><li>    <span id="optional_second_nested_object-512630408">
+      <a href="#optional_second_nested_object-512630408" class="anchor">
+        <code>optional_second_nested_object</code>
       </a>
     </span>
 <div class="schema"><p>It&#8217;s a bug</p>
-<ul><li>Required: no</li><li>    <span id="required_param-994367058">
-      <a href="#required_param-994367058" class="anchor">
-        <tt>required_param</tt>
+<ul><li>Required: no</li><li>    <span id="required_param--1026891718">
+      <a href="#required_param--1026891718" class="anchor">
+        <code>required_param</code>
       </a>
     </span>
 <div class="schema"><p>It&#8217;s required</p>
-<ul><li>Required: yes</li><li>Type: string</li></ul></div></li><li>    <span id="optional_param-156621745">
-      <a href="#optional_param-156621745" class="anchor">
-        <tt>optional_param</tt>
+<ul><li>Required: yes</li><li>Type: string</li></ul></div></li><li>    <span id="optional_param-1020913361">
+      <a href="#optional_param-1020913361" class="anchor">
+        <code>optional_param</code>
       </a>
     </span>
 <div class="schema"><p>It&#8217;s optional</p>
 <ul><li>Required: no</li><li>Type: string</li></ul></div></li></ul></div></li></ul></div></li></ul></div>
         
 
-            <h2 id="response">
+        
+              <h2 id="response">
       <a href="#response" class="anchor">
         Response
       </a>
     </h2>
 
-        
               <h3 id="example_response">
       <a href="#example_response" class="anchor">
         Example Response
       </a>
     </h3>
 
-          <tt>&quot;&quot;</tt>
+
+          
+            <div class="code-section example-headers"><pre>Content-Length: 2048</pre></div>
+          
+
+          <div class="code-section example-body">
+            <code>&quot;&quot;</code>
+          </div>
+
+          
+                <h3 id="response_headers">
+      <a href="#response_headers" class="anchor">
+        Response Headers
+      </a>
+    </h3>
+
+            <div class="schema"><ul><li>    <span id="Content-Length--749391612">
+      <a href="#Content-Length--749391612" class="anchor">
+        <code>Content-Length</code>
+      </a>
+    </span>
+<div class="schema"><p>Length of body in bytes</p>
+<ul><li>Required: yes</li><li>Type: string</li><li>Example: <code>2048</code></li></ul></div></li></ul></div>
+          
 
               <h3 id="response_parameters">
       <a href="#response_parameters" class="anchor">
@@ -224,11 +275,14 @@
 <ul><li>Type: string</li></ul></div>
         
 
-            <h3 id="response_codes">
+        
+                <h3 id="response_codes">
       <a href="#response_codes" class="anchor">
         Response Codes
       </a>
     </h3>
+
+        
 
         
               <h4 id="successful_response_codes">
