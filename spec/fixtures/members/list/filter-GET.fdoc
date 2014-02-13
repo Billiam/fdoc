@@ -1,4 +1,11 @@
 description: The list of members, filtered by params
+requestHeaders:
+  properties:
+    Accept:
+      type: string
+      required: no
+      description: Acceptable media types
+      example: application/json
 requestParameters:
   type: object
   properties:
@@ -26,6 +33,13 @@ requestParameters:
       description: |
         If provided, results returned will only be updated after
         the given date (inclusive)
+responseHeaders:
+  properties:
+    Content-Type:
+      type: string
+      required: yes
+      description: Response format
+      example: application/json
 responseParameters:
   type: object
   properties:

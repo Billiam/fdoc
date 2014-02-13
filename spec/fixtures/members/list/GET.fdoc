@@ -1,4 +1,11 @@
 description: The list of members.
+requestHeaders:
+  properties:
+    Accept:
+      type: string
+      required: no
+      description: Acceptable media types
+      example: application/json
 requestParameters:
   properties:
     limit:
@@ -17,6 +24,13 @@ requestParameters:
         - name
         - email
         - member_since
+responseHeaders:
+  properties:
+    Content-Type:
+      type: string
+      required: yes
+      description: Response format
+      example: application/json
 responseParameters:
   properties:
     members:

@@ -1,4 +1,11 @@
 description: Add a new member
+requestHeaders:
+  properties:
+    Accept:
+      type: string
+      required: no
+      description: Acceptable media types
+      example: application/json, text/html
 requestParameters:
   properties:
     name:
