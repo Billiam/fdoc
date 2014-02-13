@@ -104,7 +104,10 @@ a .endpoint-name .verb {
   content: "headers";
 }
 
-pre code { display: block; }
+pre code,
+.code-section code {
+  display: block;
+}
 tt, kbd, code {
   font-family: Consolas, 'Liberation Mono', Courier, monospace;
   font-size: 12px;

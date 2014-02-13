@@ -18,7 +18,7 @@ class Fdoc::JsonPresenter
       '<code>%s</code>' % json
     elsif json.kind_of?(Hash) ||
           json.kind_of?(Array)
-      '<div class="CodeRay code-section example-body"><pre>%s</pre></div>' % CodeRay.scan(JSON.pretty_generate(json), :json).div(wrap: nil, css: :class)
+      '<pre class="CodeRay">%s</pre>' % CodeRay.scan(JSON.pretty_generate(json), :json).div(wrap: nil, css: :class)
     end
   end
 

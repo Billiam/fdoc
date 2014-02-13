@@ -36,7 +36,9 @@
             <%= example_request_headers.to_html %>
           <% end %>
 
-          <%= example_request.to_html %>
+          <div class="code-section example-body">
+            <%= example_request.to_html %>
+          </div>
 
           <% if show_request_headers? %>
             <%= tag_with_anchor('h3', 'Request Headers') %>
@@ -55,7 +57,9 @@
             <%= example_response_headers.to_html %>
           <% end %>
 
-          <%= example_response.to_html %>
+          <div class="code-section example-body">
+            <%= example_response.to_html %>
+          </div>
 
           <% if show_response_headers? %>
             <%= tag_with_anchor('h3', 'Response Headers') %>
