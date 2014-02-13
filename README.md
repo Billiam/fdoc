@@ -114,6 +114,12 @@ Here is `docs/fdoc/members/list-GET.fdoc`:
 
 ```yaml
 description: The list of members.
+requestHeaders:
+  properties:
+    Accept:
+      type: string
+      required: yes
+      example: application/json
 requestParameters:
   properties:
     limit:
@@ -121,6 +127,12 @@ requestParameters:
       required: no
       default: 50
       description: Limits the number of results returned, used for paging.
+responseHeaders:
+  properties:
+    Content-Type:
+      type: string
+      required: yes
+      example: application/json
 responseParameters:
   properties:
     members:
